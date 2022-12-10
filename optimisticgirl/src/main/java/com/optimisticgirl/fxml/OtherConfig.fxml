@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="458.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.optimisticgirl.controller.OtherConfigController">
+    <children>
+        <Label layoutX="69.0" layoutY="83.0" text="设置线程" />
+        <ComboBox fx:id="requestThreadBox" layoutX="147.0" layoutY="77.0" prefWidth="100.0" promptText="1" />
+        <TextField fx:id="requestThreadField" layoutX="257.0" layoutY="77.0" maxWidth="100.0" />
+        <Button layoutX="361.0" layoutY="77.0" mnemonicParsing="false" onAction="#setRequestThread" text="SET" />
+    </children>
+</Pane>

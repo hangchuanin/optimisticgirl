@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.optimisticgirl.controller.ProxyController">
+    <children>
+        <RadioButton fx:id="enableProxy" layoutX="110.0" layoutY="38.0" mnemonicParsing="false" text="启用" />
+        <RadioButton fx:id="disableProxy" layoutX="180.0" layoutY="38.0" mnemonicParsing="false" text="禁用" />
+        <Label layoutX="24.0" layoutY="84.0" text="ip地址" />
+        <TextField fx:id="proxyIp" layoutX="86.0" layoutY="78.0" maxWidth="200.0" />
+        <Label layoutX="32.0" layoutY="126.0" text="端口" />
+        <TextField fx:id="proxyPort" layoutX="86.0" layoutY="120.0" maxWidth="200.0" />
+        <Label layoutX="23.0" layoutY="165.0" text="用户名" />
+        <Label layoutX="32.0" layoutY="204.0" text="密码" />
+        <TextField fx:id="proxyUsername" layoutX="86.0" layoutY="162.0" maxWidth="200.0" />
+        <TextField fx:id="proxyPassword" layoutX="86.0" layoutY="204.0" maxWidth="200.0" />
+        <ComboBox fx:id="proxyType" layoutX="10.0" layoutY="32.0" prefWidth="90.0" promptText="HTTP" />
+    </children>
+</Pane>

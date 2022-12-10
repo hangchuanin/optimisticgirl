@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.optimisticgirl.controller.TargetsController">
+    <children>
+        <Label layoutX="65.0" layoutY="97.0" text="Targets" />
+        <TextArea fx:id="targetArea" layoutX="122.0" layoutY="82.0" prefHeight="200.0" prefWidth="200.0" />
+        <TextField fx:id="targetField" layoutX="122.0" layoutY="28.0" prefWidth="200.0" maxWidth="200.0" />
+        <Button layoutX="330.0" layoutY="28.0" mnemonicParsing="false" onAction="#addTargets" text="ADD" />
+        <Button layoutX="490.0" layoutY="28.0" mnemonicParsing="false" onAction="#cleanTargets" text="Clean" />
+        <Label layoutX="50.0" layoutY="34.0" text="添加Targets" />
+        <Label layoutX="415.0" layoutY="34.0" text="清空Targets" />
+    </children>
+</Pane>

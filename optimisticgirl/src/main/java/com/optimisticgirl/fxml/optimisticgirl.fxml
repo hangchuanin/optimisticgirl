@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<AnchorPane prefHeight="979.0" prefWidth="1049.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.optimisticgirl.controller.OptimisticgirlController">
+    <children>
+        <Pane prefHeight="979.0" prefWidth="1049.0">
+            <children>
+                <Pane prefHeight="30.0" prefWidth="1049.0">
+                    <children>
+                        <MenuBar prefHeight="30.0" prefWidth="1049.0">
+                            <menus>
+                                <Menu mnemonicParsing="false" text="File">
+                                    <items>
+                                        <MenuItem mnemonicParsing="false" onAction="#loadTargetsFromFile" text="从文件导入目标" />
+                                        <MenuItem mnemonicParsing="false" onAction="#loadResultsFromCsvFile" text="从CSV文件导入结果" />
+                                        <MenuItem mnemonicParsing="false" onAction="#loadResultsFromTxtFile" text="从TXT文件导入结果" />
+                                        <MenuItem mnemonicParsing="false" onAction="#exportResultIntoCsvFile" text="导出结果到CSV文件中" />
+                                        <MenuItem mnemonicParsing="false" onAction="#exportResultIntoTxtFile" text="导出结果到TXT文件中" />
+                                    </items>
+                                </Menu>
+                                <Menu mnemonicParsing="false" text="Proxy">
+                                    <items>
+                                        <MenuItem mnemonicParsing="false" onAction="#setHttpProxy" text="配置代理" />
+                                    </items>
+                                </Menu>
+                                <Menu mnemonicParsing="false" text="HttpConfig">
+                                    <items>
+                                        <MenuItem mnemonicParsing="false" onAction="#configRequestType" text="配置请求方式" />
+                                        <MenuItem mnemonicParsing="false" onAction="#configRequestHeader" text="配置HTTP请求头" />
+                                        <MenuItem mnemonicParsing="false" onAction="#configTargets" text="配置Targets" />
+                                    </items>
+                                </Menu>
+                                <Menu mnemonicParsing="false" text="其它配置">
+                                    <items>
+                                        <MenuItem mnemonicParsing="false" onAction="#setOtherConfig" text="其它配置" />
+                                    </items>
+                                </Menu>
+                            </menus>
+                        </MenuBar>
+                    </children>
+                </Pane>
+                <Label layoutX="10.0" layoutY="52.0" prefHeight="30.0" prefWidth="77.0" text="查询条件" />
+                <TextField fx:id="queryField" layoutX="66.0" layoutY="57.0" prefHeight="25.0" prefWidth="650.0" />
+                <Button layoutX="730.0" layoutY="57.0" mnemonicParsing="false" onAction="#queryResp" prefHeight="25.0" prefWidth="50.0" text="查询" />
+                <Button fx:id="startBut" layoutX="790.0" layoutY="57.0" mnemonicParsing="false" onAction="#startRun" prefHeight="25.0" prefWidth="50.0" text="Start" />
+                <Button fx:id="stopBut" layoutX="850.0" layoutY="57.0" mnemonicParsing="false" onAction="#stopRun" prefHeight="25.0" prefWidth="50.0" text="Stop" />
+                <Button fx:id="cleanBut" layoutX="910.0" layoutY="57.0" mnemonicParsing="false" onAction="#cleanRun" prefHeight="25.0" prefWidth="50.0" text="Clean" />
+                <Label fx:id="progressBar" layoutX="970.0" layoutY="52.0" prefHeight="30.0" prefWidth="77.0" text="Num:0" />
+                <TabPane fx:id="tabPane" layoutY="110.0" prefHeight="650.0" prefWidth="1049.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                        <Tab fx:id="tabAll" text="ALL Result">
+                            <content>
+                                <TableView fx:id="respTable" prefHeight="600.0" prefWidth="1049.0">
+                                    <columns>
+                                        <TableColumn fx:id="tableNum" prefWidth="75.0" text="序号" />
+                                        <TableColumn fx:id="tableHost" prefWidth="200.0" text="HOST" />
+                                        <TableColumn fx:id="tableStatus" prefWidth="75.0" text="Status" />
+                                        <TableColumn fx:id="tableTitle" prefWidth="200.0" text="Title" />
+                                        <TableColumn fx:id="tableServer" prefWidth="75.0" text="Server" />
+                                        <TableColumn fx:id="tableLen" prefWidth="100.0" text="ContentLength" />
+                                        <TableColumn fx:id="tableReadUrl" prefWidth="200.0" text="网站跳转地址" />
+                                        <TableColumn fx:id="contentType" prefWidth="127.0" text="ContentType" />
+                                    </columns>
+                                </TableView>
+                            </content>
+                        </Tab>
+                        <Tab fx:id="tabSearch" text="Search Result">
+                            <content>
+                                <TableView fx:id="respTableSearch" prefHeight="600.0" prefWidth="1049.0">
+                                    <columns>
+                                        <TableColumn fx:id="tableNumSearch" prefWidth="75.0" text="序号" />
+                                        <TableColumn fx:id="tableHostSearch" prefWidth="200.0" text="HOST" />
+                                        <TableColumn fx:id="tableStatusSearch" prefWidth="75.0" text="Status" />
+                                        <TableColumn fx:id="tableTitleSearch" prefWidth="200.0" text="Title" />
+                                        <TableColumn fx:id="tableServerSearch" prefWidth="75.0" text="Server" />
+                                        <TableColumn fx:id="tableLenSearch" prefWidth="100.0" text="ContentLength" />
+                                        <TableColumn fx:id="tableReadUrlSearch" prefWidth="200.0" text="网站跳转地址" />
+                                        <TableColumn fx:id="contentTypeSearch" prefWidth="127.0" text="ContentType" />
+                                    </columns>
+                                </TableView>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

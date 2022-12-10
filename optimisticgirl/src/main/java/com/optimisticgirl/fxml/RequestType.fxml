@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.optimisticgirl.controller.RequestTypeController">
+    <children>
+        <Label layoutX="25.0" layoutY="200.0" text="请求体" />
+        <ComboBox fx:id="enctype" layoutX="210.0" layoutY="26.0" prefWidth="100.0" promptText="application/x-www-form-urlencoded" />
+        <ComboBox fx:id="requestType" layoutX="85.0" layoutY="26.0" prefWidth="120.0" onAction="#changeRequestType" promptText="GET" />
+        <TextArea fx:id="requestContents" layoutX="85.0" layoutY="193.0" prefHeight="200.0" prefWidth="200.0" />
+        <Label  layoutX="23.0" layoutY="100.0" text="请求路径" />
+        <TextArea fx:id="requestPaths" layoutX="85.0" layoutY="82.0" prefHeight="100.0" prefWidth="200.0" />
+        <Label layoutX="23.0" layoutY="32.0" text="请求方式" />
+    </children>
+</Pane>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="458.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.optimisticgirl.controller.RequestHeaderController">
+    <children>
+        <Label layoutX="60.0" layoutY="110.0" text="Key" />
+        <TextArea fx:id="requestHeader" layoutX="95.0" layoutY="180.0" prefHeight="200.0" prefWidth="200.0" />
+        <TextField fx:id="Key" layoutX="95.0" layoutY="109.0" maxWidth="100.0" />
+        <Label layoutX="210.0" layoutY="111.0" text="Value" />
+        <TextField fx:id="Value" layoutX="256.0" layoutY="109.0" maxWidth="100.0" />
+        <Button layoutX="363.0" layoutY="108.0" mnemonicParsing="false" onAction="#addRequestHeadKeyValue" text="ADD" />
+        <Label layoutX="30.0" layoutY="225.0" text="请求头" />
+    </children>
+</Pane>
