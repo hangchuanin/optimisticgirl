@@ -1,7 +1,7 @@
 # optimisticgirl
 
 自定义HTTP请求包的批量请求器，可以从大量请求中过滤特定的数据包。
-![image](https://user-images.githubusercontent.com/120230212/229113924-70726ef3-7f0d-49ce-a98c-d7b3c01775d5.png)
+![image](https://user-images.githubusercontent.com/120230212/229114119-2d5a6b7c-6077-4a1d-b722-43da5c023882.png)
 
 # 查询语句
 
